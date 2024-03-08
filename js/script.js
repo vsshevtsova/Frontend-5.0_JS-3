@@ -1,4 +1,4 @@
-//Вопросы
+//Первая часть задания
 
 let numberOfFilms;
 let film = "";
@@ -23,18 +23,6 @@ function myLvl() {
     start();
   }
 }
-start();
-
-//Объект
-let personalMovieDB = {
-  count: numberOfFilms,
-  movies: {},
-  actors: {},
-  genres: [],
-  private: false,
-};
-//Объект
-
 function myFilms() {
   film = prompt("Один из последних просмотренных фильмов?");
   rate = +prompt("На сколько оцените его?");
@@ -48,8 +36,8 @@ function askMe() {
     personalMovieDB.movies[film] = rate;
   }
 }
-myLvl();
-askMe();
+
+//Вторая часть задания
 
 // Создать функцию showMyDB, которая будет проверять свойство privat. Если стоит в позиции false - выводит в консоль главный объект программы
 // Создать функцию writeYourGenres в которой пользователь будет 3 раза отвечать на вопрос 'Ваш любимый жанр под номером ${номер по порядку}'.
@@ -67,5 +55,20 @@ function writeYourGenres() {
   }
 }
 
+start();
+
+//Объект
+let personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  private: false,
+};
+
+//Вызов функций
+
+myLvl();
+askMe();
 writeYourGenres();
 showMyDB();
